@@ -12,9 +12,16 @@ const MoviesList = () => {
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
   const url = 'https://movies-api-jpdf00.herokuapp.com/movies';
+  const options = {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  };
 
   useEffect(() => {
-    getData(url)
+    getData(url, options)
       .then((resp) => {
         if (resp.ok) {
           return resp.json();

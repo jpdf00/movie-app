@@ -1,5 +1,5 @@
-const getData = async (url) => {
-  const data = await fetch(url, { method: 'GET', redirect: 'follow' });
+const getData = async (url, options) => {
+  const data = await fetch(url, options);
   return data;
 };
 
