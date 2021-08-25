@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './Components/App';
-// import './Assets/Stylesheets/index.css';
 import rootReducer from './Reducers/index';
 
 const initialState = {
-  filter: 'ALL',
+  filter: 'All',
   movie: [],
   favourite: [],
 };

@@ -1,0 +1,12 @@
+.filter {
+  top: 40px;
+  right: 30px;
+  position: absolute;
+  width: 90px;
+  height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px 0 5px 5px;
+  border: solid 1px #eee;
+  color: #000;
+  background-color: #eee;
+}

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeMovie } from '../Actions/index';
 import Movie from '../Components/Movie';
 import getData from '../Fetch/asyncFetch';
-// import '../Assets/Stylesheets/NotFound.css';
+import '../Assets/Stylesheets/Container.css';
 
 const MoviesList = () => {
   const filter = useSelector((state) => state.filter);
@@ -15,9 +15,6 @@ const MoviesList = () => {
   const options = {
     method: 'GET',
     mode: 'cors',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
   };
 
   useEffect(() => {
@@ -54,7 +51,7 @@ const MoviesList = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       {movies.map((movie) => (
         <Movie
           key={movie.ID}

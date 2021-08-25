@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 55px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.navbar__menu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 0 5px 5px 5px;
+  background-color: #fff;
+  top: 40px;
+  left: 30px;
+  position: absolute;
+  padding: 10px;
+}

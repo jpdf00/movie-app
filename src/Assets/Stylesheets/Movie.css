@@ -1,0 +1,46 @@
+.movie {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: auto;
+  box-shadow: 2px 2px 15px 3px #aaa;
+  margin-bottom: 40px;
+}
+
+.movie__poster {
+  border-radius: 5px 5px 0 0;
+
+}
+
+.movie__details {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #000;
+  padding: 10px 10px 15px 10px;
+}
+
+.movie__details__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.movie__details__row__title {
+  font-weight: bold;
+}
+
+.movie__details__row__year {
+  font-weight: bold;
+}
+
+.movie__details__row__stars {
+  color: #e3c920;
+}
+
+.movie__details__row__runtime {
+  color: #aaa;
+  font-size: 10px;
+}

@@ -12,9 +12,13 @@ const FavouriteList = () => {
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
   const url = 'https://movies-api-jpdf00.herokuapp.com/favourites';
+  const options = {
+    method: 'GET',
+    mode: 'cors',
+  };
 
   useEffect(() => {
-    getData(url)
+    getData(url, options)
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
@@ -47,7 +51,7 @@ const FavouriteList = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       {movies.map((movie) => (
         <Movie
           key={movie.ID}
