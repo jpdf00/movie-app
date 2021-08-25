@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import movieReducer from './movie';
 import filterReducer from './filter';
-import favouriteReducer from './favourite';
+import titleReducer from './title';
 
 const REDUCERS_LIST = {
-  movie: movieReducer,
+  movies: movieReducer,
   filter: filterReducer,
-  favourite: favouriteReducer,
+  title: titleReducer,
 };
 
 const rootReducer = combineReducers(REDUCERS_LIST);

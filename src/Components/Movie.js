@@ -8,7 +8,7 @@ const Movie = (props) => {
   const d = new Date(movie.year);
 
   return (
-    <Link to={`/movie/${movie.id}`}>
+    <Link to={`/movies/${movie.id}`}>
       <div className="movie">
         <img className="movie__poster" src={movie.poster} alt="Movie Poster" />
 

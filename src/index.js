@@ -7,8 +7,8 @@ import rootReducer from './Reducers/index';
 
 const initialState = {
   filter: 'All',
-  movie: [],
-  favourite: [],
+  movies: [],
+  title: 'Login',
 };
 
 const store = createStore(rootReducer, initialState);

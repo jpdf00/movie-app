@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { changeMovie } from '../Actions/index';
 import Movie from '../Components/Movie';
 import getData from '../Fetch/asyncFetch';
@@ -7,11 +8,13 @@ import '../Assets/Stylesheets/Container.css';
 
 const MoviesList = () => {
   const filter = useSelector((state) => state.filter);
-  const movies = useSelector((state) => state.movie);
+  const movies = useSelector((state) => state.movies);
+  const title = useSelector((state) => state.title);
+  const { page } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
-  const url = 'https://movies-api-jpdf00.herokuapp.com/movies';
+  const url = `https://movies-api-jpdf00.herokuapp.com/${page}`;
   const options = {
     method: 'GET',
     mode: 'cors',
@@ -34,7 +37,7 @@ const MoviesList = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [title]);
 
   if (loading) {
     return (
@@ -54,7 +57,7 @@ const MoviesList = () => {
     <div className="container">
       {movies.map((movie) => (
         <Movie
-          key={movie.ID}
+          key={movie.id}
           movie={movie}
           filter={filter}
         />

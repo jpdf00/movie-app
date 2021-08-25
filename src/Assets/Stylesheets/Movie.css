@@ -24,8 +24,19 @@
 
 .movie__details__row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+
+.movie__details__row__photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-image: url('https://m.media-amazon.com/images/M/MV5BMjAwMDI0NTIyOF5BMl5BanBnXkFtZTYwODcyMzk0._V1_.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-right: 5px;
 }
 
 .movie__details__row__title {

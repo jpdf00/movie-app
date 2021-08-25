@@ -1,6 +1,6 @@
 const CHANGE_MOVIE = 'CHANGE_MOVIE';
 const CHANGE_FILTER = 'CHANGE_FILTER';
-const CHANGE_FAVOURITE = 'CHANGE_FAVOURITE';
+const CHANGE_TITLE = 'CHANGE_TITLE';
 
 const changeMovie = (movie) => ({
   type: CHANGE_MOVIE,
@@ -12,16 +12,16 @@ const changeFilter = (filter) => ({
   payload: filter,
 });
 
-const changeFavourite = (favourite) => ({
-  type: CHANGE_FAVOURITE,
-  payload: favourite,
+const changeTitle = (title) => ({
+  type: CHANGE_TITLE,
+  payload: title,
 });
 
 export {
-  changeMovie,
-  changeFilter,
-  changeFavourite,
   CHANGE_MOVIE,
   CHANGE_FILTER,
-  CHANGE_FAVOURITE,
+  CHANGE_TITLE,
+  changeMovie,
+  changeFilter,
+  changeTitle,
 };

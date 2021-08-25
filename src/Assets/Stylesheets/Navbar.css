@@ -15,11 +15,16 @@
 .navbar__menu {
   display: flex;
   flex-direction: column;
-  border: 1px solid #000;
   border-radius: 0 5px 5px 5px;
   background-color: #fff;
   top: 40px;
   left: 30px;
   position: absolute;
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.navbar__menu__item {
+  padding: 10px 10px;
+  border-bottom: solid 1px #333;
+  color: #000;
 }

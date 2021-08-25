@@ -1,11 +1,11 @@
 import { CHANGE_MOVIE } from '../Actions/index';
 
 const movieReducer = (state = [], action) => {
-  let newState = state;
+  let newState = [...state];
   if (action.payload) {
     switch (action.type) {
       case CHANGE_MOVIE:
-        newState = action.payload;
+        newState = [...action.payload];
         return newState;
       default:
         return newState;
