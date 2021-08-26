@@ -6,8 +6,9 @@ import App from './Components/App';
 import rootReducer from './Reducers/index';
 
 const initialState = {
-  filter: 'All',
   movies: [],
+  movie: {},
+  filter: 'All',
   title: 'Login',
 };
 

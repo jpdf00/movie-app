@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { changeMovie } from '../Actions/index';
+import { changeMovies } from '../Actions/index';
 import Movie from '../Components/Movie';
 import getData from '../Fetch/asyncFetch';
 import '../Assets/Stylesheets/Container.css';
@@ -29,7 +29,7 @@ const MoviesList = () => {
         throw resp;
       })
       .then((resp) => {
-        dispatch(changeMovie(resp));
+        dispatch(changeMovies(resp));
       })
       .catch(() => {
         setError(true);

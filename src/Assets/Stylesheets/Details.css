@@ -14,7 +14,7 @@
   display: flex;
   position: absolute;
   width: 100vw;
-  bottom: 235px;
+  bottom: 145px;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
@@ -26,9 +26,25 @@
 .detail__plot {
   display: flex;
   width: 100vw;
-  bottom: 235px;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   padding: 10px 10px 15px 10px;
+}
+
+.detail__plot__title {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 10px 10px 0;
+}
+
+.detail__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #ff6026;
+  font-size: 12px;
+  height: 60px;
+  font-family: 'Montserrat', sans-serif;
 }
