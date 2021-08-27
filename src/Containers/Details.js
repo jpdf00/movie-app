@@ -92,7 +92,6 @@ const Details = () => {
     if (favourite) {
       getData(urlDELETE, optionsDELETE)
         .then((resp) => {
-          console.log(resp.ok);
           if (resp.ok) {
             return resp.json();
           }

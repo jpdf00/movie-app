@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../Assets/Stylesheets/Movie.css';
 
 const Movie = (props) => {
-  const { movie, filter } = props; // eslint-disable-line
+  const { movie } = props;
   const d = new Date(movie.year);
 
   return (
@@ -47,7 +47,6 @@ Movie.propTypes = {
     photo: PropTypes.string.isRequired,
     director: PropTypes.string.isRequired,
   }).isRequired,
-  filter: PropTypes.string.isRequired,
 };
 
 export default Movie;

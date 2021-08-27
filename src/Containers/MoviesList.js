@@ -10,6 +10,7 @@ const MoviesList = () => {
   const filter = useSelector((state) => state.filter);
   const movies = useSelector((state) => state.movies);
   const title = useSelector((state) => state.title);
+  const filteredMovies = movies.filter((movie) => movie.genre === filter || filter === 'All');
   const { page } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -55,11 +56,10 @@ const MoviesList = () => {
 
   return (
     <div className="container">
-      {movies.map((movie) => (
+      {filteredMovies.map((movie) => (
         <Movie
           key={movie.id}
           movie={movie}
-          filter={filter}
         />
       ))}
     </div>

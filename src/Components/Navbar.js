@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeTitle } from '../Actions/index';
+import { changeTitle, changeUser } from '../Actions/index';
 import Filter from '../Containers/Filter';
 import '../Assets/Stylesheets/Navbar.css';
 
@@ -25,6 +25,9 @@ const Navbar = () => {
 
   const handleClick = (title) => {
     toggleMenu();
+    if (title === 'Login') {
+      dispatch(changeUser(''));
+    }
     dispatch(changeTitle(capitalize(title)));
   };
 

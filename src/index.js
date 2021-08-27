@@ -9,7 +9,8 @@ const initialState = {
   movies: [],
   movie: {},
   filter: 'All',
-  title: 'Login',
+  title: 'Movies',
+  user: '',
 };
 
 const store = createStore(rootReducer, initialState);
