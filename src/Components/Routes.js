@@ -33,7 +33,16 @@ const Routes = () => {
             <Route path="/movies/:id" component={Details} />
           </>
         )
-        : <Route component={Login} />}
+        : (
+          <Route render={(props) => (
+            <Login
+              user={user}
+              handleSubmit={handleSubmit}
+              routerProps={props}
+            />
+          )}
+          />
+        )}
       <Route component={NotFound} />
     </Switch>
   );
