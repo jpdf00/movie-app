@@ -1,8 +1,6 @@
 .filter {
-  top: 40px;
-  right: 30px;
-  position: absolute;
-  width: 90px;
+  z-index: 999;
+  width: 95px;
   height: 25px;
   font-family: 'Montserrat', sans-serif;
   border-radius: 5px 0 5px 5px;

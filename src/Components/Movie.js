@@ -9,10 +9,10 @@ const Movie = (props) => {
 
   return (
     <Link to={`/movies/${movie.id}`}>
-      <div className="movie">
+      <article className="movie">
         <img className="movie__poster" src={movie.poster} alt="Movie Poster" />
 
-        <div className="movie__details">
+        <section className="movie__details">
           <div className="movie__details__row">
             <h3 className="movie__details__row__title">{movie.title}</h3>
             <h3 className="movie__details__row__year">{d.getUTCFullYear()}</h3>
@@ -27,8 +27,8 @@ const Movie = (props) => {
             </div>
             <p className="movie__details__row__runtime">{`${movie.runtime} min`}</p>
           </div>
-        </div>
-      </div>
+        </section>
+      </article>
     </Link>
   );
 };

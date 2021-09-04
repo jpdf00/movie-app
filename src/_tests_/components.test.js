@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { MOVIES } from './mockData';
-import Confirmation from '../Components/Confirmation';
 import Login from '../Components/Login';
 import Navbar from '../Components/Navbar';
 import Movie from '../Components/Movie';
@@ -23,29 +22,6 @@ const initialState = {
 const mockFunc = () => true;
 
 const mockStore = configureStore([]);
-
-describe('Confirmation', () => {
-  let store;
-  let component;
-
-  beforeEach(() => {
-    store = mockStore(initialState);
-
-    store.dispatch = jest.fn();
-
-    component = renderer.create(
-      <Provider store={store}>
-        <BrowserRouter>
-          <Confirmation />
-        </BrowserRouter>
-      </Provider>,
-    );
-  });
-
-  it('Should render', () => {
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-});
 
 describe('Login', () => {
   let store;

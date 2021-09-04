@@ -5,11 +5,14 @@
   width: 100vw;
   height: 55px;
   align-items: center;
-  justify-content: space-around;
   background-color: #fff;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
   color: #333;
+}
+
+.navbar__icon {
+  padding: 0 40px;
 }
 
 .navbar__menu {
@@ -21,6 +24,10 @@
   left: 30px;
   position: absolute;
   padding: 10px 0;
+}
+
+.navbar__title {
+  margin: 0 auto;
 }
 
 .navbar__menu__item {

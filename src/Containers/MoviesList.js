@@ -42,27 +42,27 @@ const MoviesList = () => {
 
   if (loading) {
     return (
-      <div className="processing">
+      <aside className="processing">
         Processing
-      </div>
+      </aside>
     );
   }
 
   if (error) {
     return (
-      <div className="NotFound" />
+      <aside className="notfound" />
     );
   }
 
   return (
-    <div className="container">
+    <section className="container">
       {filteredMovies.map((movie) => (
         <Movie
           key={movie.id}
           movie={movie}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

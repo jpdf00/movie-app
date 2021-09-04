@@ -116,23 +116,23 @@ const Details = () => {
 
   if (loading) {
     return (
-      <div className="processing">
+      <aside className="processing">
         Processing
-      </div>
+      </aside>
     );
   }
 
   if (error) {
     return (
-      <div className="NotFound" />
+      <aside className="notfound" />
     );
   }
 
   return (
-    <div className="detail">
+    <section className="detail">
       <img className="detail__poster" src={movie.poster} alt="Movie Poster" />
 
-      <div className="detail__info">
+      <aside className="detail__info">
         <div className="movie__details__row">
           <div className="movie__details__row">
             <img className="movie__details__row__photo" src="" alt="" style={{ backgroundImage: `url(${movie.photo})` }} />
@@ -150,15 +150,15 @@ const Details = () => {
           </div>
           <p className="movie__details__row__runtime">{`${movie.runtime} min`}</p>
         </div>
-      </div>
-      <div className="detail__plot">
+      </aside>
+      <article className="detail__plot">
         <h3 className="detail__plot__title">About this Movie:</h3>
         {movie.plot}
-      </div>
+      </article>
       <div className="detail__button" onClick={() => (handleClick())} onKeyPress={() => (handleClick())} role="menu" tabIndex={0}>
         {favourite ? 'REMOVE FROM FAVOURITES' : 'ADD TO FAVOURITES'}
       </div>
-    </div>
+    </section>
   );
 };
 

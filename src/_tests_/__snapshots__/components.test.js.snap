@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Confirmation Should render 1`] = `
-<div
-  className="form"
->
-  <p
-    className="form__label"
-  >
-    You are succesfully loged in.
-  </p>
-</div>
-`;
-
 exports[`Details Should render 1`] = `
 <div
   className="processing"

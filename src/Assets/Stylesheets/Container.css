@@ -4,3 +4,21 @@
   align-items: center;
   margin-top: 70px;
 }
+
+.processing {
+  color: #fff;
+  background-image: url("https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif");
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 130px 10px 0 10px;
+}
+
+.notfound {
+  color: #fff;
+  background-image: url("https://hugocalixto.com.br/wp-content/uploads/sites/22/2020/07/error-404-1.png");
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 130px 10px 0 10px;
+}
