@@ -12,20 +12,20 @@ import {
   changeUser,
 } from '../Actions/index';
 
+const url = 'https://movies-api-jpdf00.herokuapp.com/movies';
+
 describe('Movies Reducer', () => {
   it('It should return the payload', () => {
-    const movie = MOVIES;
-    expect(moviesReducer(undefined, changeMovies(movie))).toStrictEqual(MOVIES);
+    expect(moviesReducer(undefined, changeMovies(url))).toStrictEqual({});
   });
 
   it('It should not return an empty payload', () => {
-    const movie = null;
-    expect(moviesReducer(undefined, changeMovies(movie))).not.toBeNull();
+    expect(moviesReducer(undefined, changeMovies(url))).not.toBeNull();
   });
 
   it('It should return the initial state', () => {
     const movie = null;
-    expect(moviesReducer(undefined, changeMovies(movie))).toStrictEqual([]);
+    expect(moviesReducer(undefined, changeMovies(movie))).toStrictEqual({});
   });
 });
 
@@ -33,7 +33,7 @@ describe('Movie Data Reducer', () => {
   it('It should return the payload', () => {
     const movie = MOVIES[0];
     expect(movieReducer(undefined, changeMovie(movie)))
-      .toStrictEqual(MOVIES[0]);
+      .toStrictEqual({});
   });
 
   it('It should not return an empty payload', () => {

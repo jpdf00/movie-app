@@ -3,8 +3,8 @@ import { setupServer } from 'msw/node';
 import getData from '../Fetch/asyncFetch';
 import { MOVIES, FAVOURITES } from './mockData';
 
-const url1 = 'https://api.covid19api.com/summary';
-const url2 = 'https://api.covid19api.com/country/brazil';
+const url1 = 'https://movies-api-jpdf00.herokuapp.com/movies';
+const url2 = 'https://movies-api-jpdf00.herokuapp.com/favourites';
 
 const server = setupServer(
   rest.get(url1, (req, res, ctx) => res(

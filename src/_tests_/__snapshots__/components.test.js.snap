@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Details Should render 1`] = `
-<div
+<aside
   className="processing"
 >
   Processing
-</div>
+</aside>
 `;
 
 exports[`Filter Should render 1`] = `
@@ -101,7 +101,7 @@ exports[`Movie Should render 1`] = `
   href="/movies/3"
   onClick={[Function]}
 >
-  <div
+  <article
     className="movie"
   >
     <img
@@ -109,7 +109,7 @@ exports[`Movie Should render 1`] = `
       className="movie__poster"
       src="https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg"
     />
-    <div
+    <section
       className="movie__details"
     >
       <div
@@ -154,47 +154,92 @@ exports[`Movie Should render 1`] = `
           112 min
         </p>
       </div>
-    </div>
-  </div>
+    </section>
+  </article>
 </a>
 `;
 
 exports[`Movies Should render 1`] = `
-<div
+<aside
   className="processing"
 >
   Processing
-</div>
+</aside>
 `;
 
 exports[`Navbar Should render 1`] = `
-<div
+<nav
   className="navbar"
 >
   <i
-    className="fas fa-bars"
+    className="fas fa-bars navbar__icon"
     onClick={[Function]}
     onKeyPress={[Function]}
     role="menu"
     tabIndex={0}
   />
   <h1
-    className="title"
+    className="navbar__title"
   >
     Movies
   </h1>
-  <i
-    className="fas fa-search"
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    role="menu"
-    tabIndex={0}
-  />
-</div>
+  <select
+    className="filter"
+    name="filter"
+    onChange={[Function]}
+    value="All"
+  >
+    <option
+      value="All"
+    >
+      All
+    </option>
+    <option
+      value="Action"
+    >
+      Action
+    </option>
+    <option
+      value="Biography"
+    >
+      Biography
+    </option>
+    <option
+      value="Fantasy"
+    >
+      Fantasy
+    </option>
+    <option
+      value="History"
+    >
+      History
+    </option>
+    <option
+      value="Horror"
+    >
+      Horror
+    </option>
+    <option
+      value="Kids"
+    >
+      Kids
+    </option>
+    <option
+      value="Learning"
+    >
+      Learning
+    </option>
+    <option
+      value="Sci-Fi"
+    >
+      Sci-Fi
+    </option>
+  </select>
+</nav>
 `;
 
 exports[`Not Found Should render 1`] = `
-<div
+<section
   className="NotFound"
   id="notFound"
 />

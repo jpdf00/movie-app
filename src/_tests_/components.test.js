@@ -1,4 +1,5 @@
 import renderer from 'react-test-renderer';
+import thunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
@@ -12,8 +13,16 @@ import MoviesList from '../Containers/MoviesList';
 import Details from '../Containers/Details';
 
 const initialState = {
-  movies: MOVIES,
-  movie: MOVIES[0],
+  movies: {
+    list: MOVIES,
+    loading: true,
+    error: false,
+  },
+  movie: {
+    item: MOVIES[0],
+    loading: true,
+    error: false,
+  },
   filter: 'All',
   title: 'Movies',
   user: '',
@@ -21,7 +30,7 @@ const initialState = {
 
 const mockFunc = () => true;
 
-const mockStore = configureStore([]);
+const mockStore = configureStore([thunk]);
 
 describe('Login', () => {
   let store;
