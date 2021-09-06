@@ -1,0 +1,10 @@
+.filter {
+  z-index: 999;
+  width: 95px;
+  height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px 0 5px 5px;
+  border: solid 1px #eee;
+  color: #000;
+  background-color: #eee;
+}
